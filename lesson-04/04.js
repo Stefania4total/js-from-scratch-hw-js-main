@@ -16,10 +16,11 @@
 const str = ["a", "p", "p", "l", "e"];
 
 function doubleEachCharacter(str) {
+    let result = '';
     for (let i = 0; i < str.length; i++) {
-        str[i] = str[i] + str[i];
+    result = result + str[i] + str[i];
     }
-    return str.join('');
+    return result;
 }
 
 console.log(doubleEachCharacter(str)); 
