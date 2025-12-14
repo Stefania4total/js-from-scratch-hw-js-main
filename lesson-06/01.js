@@ -10,7 +10,8 @@
 - `element` (текущий элемент массива)
 - `index` (индекс текущего элемента)
 
-Функция `filter` должна возвращать новый массив, содержащий только те элементы `array`, для которых `callback` возвращает `true`.
+Функция `filter` должна возвращать новый массив, содержащий только те элементы `array`,
+для которых `callback` возвращает `true`.
 */
 
 /* Пример использования:
@@ -23,4 +24,13 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const filter = () => {}
+const filter = (array, callback) => {
+  const result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i], i)) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+
+}
