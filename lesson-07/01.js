@@ -16,9 +16,9 @@
 */
 
 const WEB_TECH_IMAGES = [
-  'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/32f74d50-68d0-46aa-b035-7b3a5300d2c1_js-magic-logo.jpg',
-  'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
-  'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
+    'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/32f74d50-68d0-46aa-b035-7b3a5300d2c1_js-magic-logo.jpg',
+    'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/c8a1f4a6-1337-4899-bdfd-a8c9c7bb806a_css-magic-logo.jpg',
+    'https://production-it-incubator.s3.eu-central-1.amazonaws.com/file-manager/Image/784380b9-6937-42a6-bdfe-869835820234_html-magic-logo.jpg',
 ]
 
 // Получаем элементы DOM
@@ -36,29 +36,29 @@ function updateImage() {
 }
 
 // Обработчик для кнопки "next"
-nextButton.addEventListener('click', function() {
+nextButton.addEventListener('click', function () {
     // Увеличиваем индекс на 1
     currentIndex++;
-    
+
     // Если вышли за пределы массива, возвращаемся к началу
     if (currentIndex >= WEB_TECH_IMAGES.length) {
         currentIndex = 0;
     }
-    
+
     // Обновляем изображение
     updateImage();
 });
 
 // Обработчик для кнопки "prev"
-prevButton.addEventListener('click', function() {
+prevButton.addEventListener('click', function () {
     // Уменьшаем индекс на 1
     currentIndex--;
-    
+
     // Если ушли ниже 0, переходим к последнему изображению
     if (currentIndex < 0) {
         currentIndex = WEB_TECH_IMAGES.length - 1;
     }
-    
+
     // Обновляем изображение
     updateImage();
 });
